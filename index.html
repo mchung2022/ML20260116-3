@@ -1,1 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人性尊嚴與人權保障 - 互動式教學簡報</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --highlight-color: #e74c3c;
+            --bg-color: #f5f6fa;
+            --text-color: #333;
+            --slide-bg: #ffffff;
+        }
 
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+            background-color: var(--primary-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 90%;
+            max-width: 1000px;
+            aspect-ratio: 16/9;
+            background-color: var(--slide-bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide {
+            display: none;
+            flex-direction: column;
+            height: 100%;
+            padding: 40px 60px;
+            box-sizing: border-box;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Slide Content Styling */
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        p, li {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .citation {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            vertical-align: super;
+        }
+
+        .box {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-left: 5px solid var(--accent-color);
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .question-box {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: #856404;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Controls */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 100;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+        }
+
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: var(--accent-color);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+
+        /* Specialized Layouts */
+        .center-content {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+        .column {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="presentation-container">
+    
+    <div class="slide active center-content">
+        <h1>公民與社會：人性尊嚴與人權保障</h1>
+        <h3>探討個人選擇的自由、法律保障與實踐</h3>
+        <p>第三單元 | 國中公民</p>
+        [cite_start]<p style="margin-top: 50px; font-size: 1rem; color: #7f8c8d;">點擊「下一頁」開始學習 [cite: 1, 2, 3]</p>
+    </div>
+
+    <div class="slide">
+        <h2>本課學習目標</h2>
+        <ul>
+            <li>理解<strong>人性尊嚴</strong>的核心定義與內涵。</li>
+            <li>認識<strong>人權保障</strong>的必要性與法律基礎。</li>
+            <li>探討國際人權發展（聯合國、世界人權宣言）。</li>
+            <li>分析國內法律如何保障弱勢群體（差別待遇）。</li>
+            <li>透過實例（導盲犬、柯柏格）培養尊重與行動的素養。</li>
+        </ul>
+        <div class="box">
+            [cite_start]核心問題：如何在現代社會中實踐對人的尊重？ [cite: 4, 5]
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>情境導入：長大後，你想做什麼？</h2>
+        <div class="two-columns">
+            <div class="column">
+                <div class="box">
+                    <h3>情境 A</h3>
+                    <p>「我想當老師，這是我的夢想。」</p>
+                    <p><strong>狀態：</strong>自主選擇、追求理想。</p>
+                    [cite_start]<span class="citation">[cite: 8]</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="box" style="border-left-color: var(--highlight-color);">
+                    <h3>情境 B</h3>
+                    <p>「我想開飛機，但爸爸強迫我接手家裡的小吃攤，完全不給我選擇的機會...」</p>
+                    <p><strong>狀態：</strong>被迫接受、無選擇權。</p>
+                    [cite_start]<span class="citation">[cite: 9]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide center-content">
+        <h2>素養提問：關於「被尊重」</h2>
+        <div class="question-box" style="width: 80%;">
+            <span class="question-title">想一想</span>
+            <p>在情境 B 中，這位同學的感受是什麼？</p>
+            <p>如果你的未來被別人強行決定，你會覺得「被尊重」嗎？為什麼？</p>
+        </div>
+        [cite_start]<p>[cite: 10, 11]</p>
+    </div>
+
+    <div class="slide">
+        <h2>什麼是人性尊嚴？</h2>
+        <h3>核心定義</h3>
+        <p>人性尊嚴是指每個人都是<strong>獨立自主的個體</strong>，擁有<strong>不可被剝奪的價值</strong>。</p>
+        <p>這意味著人不是工具，而是目的本身。無論種族、性別、階級，每個人生而具有價值。</p>
+        [cite_start]<span class="citation">[cite: 13, 14, 15, 16]</span>
+    </div>
+
+    <div class="slide">
+        <h2>人性尊嚴的具體內涵 (1)</h2>
+        <div class="box">
+            <h3>選擇的自由</h3>
+            <p>能決定自己的生活方式，不受他人無理干涉。</p>
+        </div>
+        <p>例如：選擇職業、宗教信仰、生活伴侶的自由。</p>
+        [cite_start]<span class="citation">[cite: 18, 19]</span>
+    </div>
+
+    <div class="slide">
+        <h2>人性尊嚴的具體內涵 (2)</h2>
+        <div class="box">
+            <h3>自主權</h3>
+            <p>在團體中能發表意見，並獲得公平對待。</p>
+        </div>
+        <p>這包含了參與公共事務、表達自我觀點而不被忽視的權利。</p>
+        [cite_start]<span class="citation">[cite: 20, 21]</span>
+    </div>
+
+    <div class="slide">
+        <h2>人性尊嚴的具體內涵 (3)</h2>
+        <div class="box">
+            <h3>不受迫害</h3>
+            <p>免於恐懼、騷擾或歧視的權利。</p>
+        </div>
+        <p>確保人身安全，不受到霸凌、暴力或不當的差別待遇。</p>
+        [cite_start]<span class="citation">[cite: 22]</span>
+    </div>
+
+    <div class="slide center-content">
+        <h2>小試身手</h2>
+        <p>以下哪種情況<strong>違反</strong>了人性尊嚴？</p>
+        <div style="text-align: left; display: inline-block;">
+            <p>A. 老師鼓勵學生發表不同的看法。</p>
+            <p class="highlight">B. 雇主扣留移工護照，限制其轉換工作。</p>
+            <p>C. 政府提供獎學金給清寒學生。</p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem;">(答案：B - 違反了選擇的自由與自主權)</p>
+    </div>
+
+    <div class="slide">
+        <h2>為什麼保障人權能維護尊嚴？</h2>
+        <p>人權不僅僅是口號，它是維護人性尊嚴的<strong>具體手段</strong>。</p>
+        <ul>
+            <li>透過落實自由權、平等權，尊嚴才能從抽象概念轉化為實際生活。</li>
+            <li>沒有人權保障的社會，尊嚴將淪為空談。</li>
+        </ul>
+        [cite_start]<span class="citation">[cite: 23, 24, 25]</span>
+    </div>
+
+    <div class="slide">
+        <h2>保障機制一：法律的強制力</h2>
+        <div class="box">
+            <p>國家制定法律（如憲法、身心障礙者權益保障法），強制約束政府或他人不可侵犯個人權利。</p>
+        </div>
+        <p>法律是底線，確保強者不能任意侵害弱者的尊嚴。</p>
+        [cite_start]<span class="citation">[cite: 26, 27]</span>
+    </div>
+
+    <div class="slide">
+        <h2>保障機制二：互惠的精神</h2>
+        <div class="box">
+            <p>不僅保障自己，也尊重他人。</p>
+            <p>當所有人都能自主選擇時，社會才能真正維護普遍的尊嚴。</p>
+        </div>
+        <p>這是一種「己所不欲，勿施於人」的社會契約。</p>
+        [cite_start]<span class="citation">[cite: 28, 29]</span>
+    </div>
+
+    <div class="slide">
+        <h2>小結：尊嚴與法律的關係</h2>
+        <ul>
+            <li><strong>人性尊嚴</strong>是核心價值（目的）。</li>
+            <li><strong>人權</strong>是具體權利（手段）。</li>
+            <li><strong>法律</strong>是保障工具（防護網）。</li>
+        </ul>
+        <p>三者環環相扣，缺一不可。</p>
+    </div>
+
+    <div class="slide">
+        <h2>歷史的教訓：為何需要普遍保障？</h2>
+        <h3>第二次世界大戰的傷痛</h3>
+        <p>納粹對猶太人的迫害及戰爭的殘酷，讓國際社會意識到：</p>
+        <div class="box" style="text-align: center; font-weight: bold;">
+            「唯有普遍的人權保障，才能維持世界和平。」
+        </div>
+        [cite_start]<span class="citation">[cite: 30, 31, 32]</span>
+    </div>
+
+    <div class="slide">
+        <h2>國際的努力：聯合國 (UN)</h2>
+        <ul>
+            <li><strong>成立時間：</strong>第二次世界大戰後。</li>
+            <li><strong>主要目標：</strong>致力於解決國際爭端與人權問題。</li>
+            <li>聯合國成為推動全球人權標準的重要平台。</li>
+        </ul>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/United_Nations_General_Assembly_Building.jpg" alt="UN Building" style="height: 200px; object-fit: cover; margin-top: 20px;">
+        [cite_start]<span class="citation">[cite: 34, 77]</span>
+    </div>
+
+    <div class="slide">
+        <h2>世界人權宣言</h2>
+        <ul>
+            <li>第一部獲國際重視的人權文件。</li>
+            <li><strong>核心精神：</strong></li>
+        </ul>
+        <blockquote style="font-size: 1.5rem; border-left: 5px solid var(--accent-color); padding-left: 20px; font-style: italic;">
+            「人人生而自由，在尊嚴和權利上一律平等。」
+        </blockquote>
+        [cite_start]<span class="citation">[cite: 35]</span>
+    </div>
+
+    <div class="slide">
+        <h2>生活中的人權實踐：弱勢保障</h2>
+        <p>法律如何落實尊嚴？</p>
+        <p>為了讓不同群體都能享有平等的尊嚴，國家會透過立法進行<strong>「差別待遇」</strong>的保障。</p>
+        <p class="highlight">注意：這裡的「差別待遇」是指為了達成實質平等而給予的特別協助，而非歧視。</p>
+        [cite_start]<span class="citation">[cite: 36, 37, 38, 39]</span>
+    </div>
+
+    <div class="slide">
+        <h2>實例一：婦女安全</h2>
+        <div class="box">
+            <h3>夜間婦女候車區</h3>
+            <p>臺鐵等公共運輸設立此區域，並加強監控與照明。</p>
+        </div>
+        <p><strong>目的：</strong>維護女性乘客的人身安全，減少恐懼，保障移動的自由。</p>
+        [cite_start]<span class="citation">[cite: 40, 41]</span>
+    </div>
+
+    <div class="slide">
+        <h2>實例二：身心障礙者權益</h2>
+        <div class="box">
+            <h3>無障礙設施</h3>
+            <p>公共場所設置無障礙廁所與坡道。</p>
+        </div>
+        <p><strong>目的：</strong>確保行動不便者也能自由移動，不因身體限制而被排除在社會活動之外。</p>
+        [cite_start]<span class="citation">[cite: 42, 43]</span>
+    </div>
+
+    <div class="slide">
+        <h2>實例三：基本生活保障</h2>
+        <div class="box">
+            <h3>社會救助</h3>
+            <p>政府發放津貼給低收入戶。</p>
+        </div>
+        <p><strong>目的：</strong>保障其「生存權」。當連飯都吃不飽時，很難談論尊嚴。這是國家對國民最基本的照顧。</p>
+        [cite_start]<span class="citation">[cite: 44, 45]</span>
+    </div>
+
+    <div class="slide">
+        <h2>議題討論：導盲犬與人權</h2>
+        <h3>導盲犬是視障者的眼睛</h3>
+        <p><strong>法律規定：</strong><br>
+        根據《身心障礙者權益保障法》，公共場所及大眾運輸<strong>不得拒絕</strong>合格導盲犬進入。</p>
+        [cite_start]<span class="citation">[cite: 46, 47, 48]</span>
+    </div>
+
+    <div class="slide">
+        <h2>素養思考：權利的衝突？</h2>
+        <div class="question-box">
+            <span class="question-title">情境思考</span>
+            <p>如果公車司機因為「怕狗弄髒車子」而拒載視障者與導盲犬，這侵害了視障者的哪種權利？</p>
+        </div>
+        <ul>
+            <li>遷徙自由（無法搭車移動）。</li>
+            <li>平等權（因為視障及導盲犬而受差別待遇）。</li>
+            <li>人性尊嚴（被拒絕的感受）。</li>
+        </ul>
+        [cite_start]<span class="citation">[cite: 50]</span>
+    </div>
+
+    <div class="slide">
+        <h2>我們該如何行動？</h2>
+        <div class="box">
+            <h3>導盲犬工作原則：三不一問</h3>
+            <ul>
+                <li><strong>不餵食</strong></li>
+                <li><strong>不干擾</strong></li>
+                <li><strong>不拒絕</strong> (這是店家的責任)</li>
+                <li><strong>主動詢問</strong>視障者是否需要協助</li>
+            </ul>
+        </div>
+        <p>這與「尊重」有何關係？尊重導盲犬的工作，就是尊重視障者獨立行動的權利。</p>
+        [cite_start]<span class="citation">[cite: 51]</span>
+    </div>
+
+    <div class="slide">
+        <h2>12歲的勇氣：柯柏格的故事</h2>
+        <div class="two-columns">
+            <div class="column">
+                <p>1995年，12歲的柯柏格看到巴基斯坦童工受虐的新聞。</p>
+                <p>他發現：<strong>同樣是孩子，命運卻大不同。</strong></p>
+                <p>這啟發了他「看見差異，採取行動」。</p>
+            </div>
+            <div class="column">
+                <img src="https://media.gettyimages.com/id/2168161649/vector/a-boy-stands-on-a-podium-or-stands-behind-or-at-a-lectern-smiling-speaking-with-a-microphone.jpg?s=1024x1024&w=gi&k=20&c=9rrvy5dB4u88_9FDwfDFq2CT_6X37ocvRgmE3md1rgk=" alt="Boy speaking" style="width: 100%; max-width: 300px;">
+            </div>
+        </div>
+        [cite_start]<span class="citation">[cite: 52, 55, 56, 57]</span>
+    </div>
+
+    <div class="slide">
+        <h2>行動帶來的改變</h2>
+        <ul>
+            <li><strong>行動：</strong>成立「解放兒童基金會」(Free the Children)。</li>
+            <li><strong>影響：</strong>在貧困地區建學校、寫信給世界領袖。</li>
+            <li><strong>核心精神：</strong>透過教育與物資援助，讓童工重獲「選擇的權利」與「人性尊嚴」。</li>
+        </ul>
+        [cite_start]<span class="citation">[cite: 58, 59, 60, 61]</span>
+    </div>
+
+    <div class="slide center-content">
+        <h2>素養提問：年齡是限制嗎？</h2>
+        <div class="question-box" style="width: 80%;">
+            <p>柯柏格開始行動時只有12歲，和你現在的年紀相仿。</p>
+            <p>這告訴我們什麼道理？</p>
+        </div>
+        <p>維護人權不需要等到長大，關注與發聲本身就是力量。</p>
+    </div>
+
+    <div class="slide">
+        <h2>深度思辨：文化 vs. 人權</h2>
+        <h3>普世價值還是西方觀點？</h3>
+        <p>國際常批評某些國家的人權紀錄不佳。</p>
+        <p>但該國政府可能回應：「國情、歷史文化不同，不應以西方標準衡量。」</p>
+        [cite_start]<span class="citation">[cite: 62, 63, 64, 65]</span>
+    </div>
+
+    <div class="slide">
+        <h2>小組討論</h2>
+        <div class="question-box">
+            <span class="question-title">討論題目</span>
+            <p>你同意「文化差異」可以作為限制人權（如言論自由、宗教自由）的理由嗎？</p>
+        </div>
+        <div class="box">
+            <p><strong>提示：</strong>回想一下「人性尊嚴」的定義——生而為人，是否應有底線？</p>
+            <p>有些文化習俗（如童婚、榮譽處決）若嚴重侵害個人生存與自主，是否仍應被尊重？</p>
+        </div>
+        [cite_start]<span class="citation">[cite: 66, 67, 69]</span>
+    </div>
+
+    <div class="slide">
+        <h2>結論：人權在互動中實踐</h2>
+        <p>我們每一個人，都有力量維護他人的尊嚴。</p>
+        <ul>
+            <li>支持身邊同學的夢想。</li>
+            <li>禮讓導盲犬。</li>
+            <li>關注國際議題。</li>
+        </ul>
+        <div class="box" style="text-align: center;">
+            <p>人權不是遙遠的法律條文，而是發生在每一次<strong>「尊重選擇」</strong>的互動中。</p>
+        </div>
+        [cite_start]<span class="citation">[cite: 71, 72]</span>
+    </div>
+
+    <div class="slide center-content">
+        <h1>謝謝聆聽</h1>
+        <p>Q & A 時間</p>
+        [cite_start]<p style="font-size: 0.9rem; margin-top: 50px;">資料來源：本簡報內容改編自公民與社會教材 [cite: 1]</p>
+        [cite_start]<p style="font-size: 0.8rem;">圖片來源：iStock, Wikipedia, GettyImages, Vecteezy [cite: 73-88]</p>
+    </div>
+
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="slide-number" id="slideNumber">1 / 30</div>
+    
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)" disabled>上一頁</button>
+        <button id="nextBtn" onclick="changeSlide(1)">下一頁</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const progressBar = document.getElementById('progressBar');
+    const slideNumber = document.getElementById('slideNumber');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    function updateSlide() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentSlide) {
+                slide.classList.add('active');
+            }
+        });
+
+        // Update progress bar
+        const progress = ((currentSlide + 1) / totalSlides) * 100;
+        progressBar.style.width = `${progress}%`;
+
+        // Update slide number
+        slideNumber.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+        // Update button states
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = 0;
+        if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+        updateSlide();
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'Space') {
+            if (currentSlide < totalSlides - 1) changeSlide(1);
+        } else if (e.key === 'ArrowLeft') {
+            if (currentSlide > 0) changeSlide(-1);
+        }
+    });
+
+    // Initialize
+    updateSlide();
+</script>
+
+</body>
+</html>
